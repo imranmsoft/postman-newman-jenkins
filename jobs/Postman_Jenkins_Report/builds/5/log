@@ -1,0 +1,31 @@
+Started by user [8mha:////4OISRqM84FXU9k/qMGOrQflZagjXUKIkCbj45Y0Lv22kAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYe/dLi1CL93MzcosQ8ADSUAu7BAAAA[0mImran Alam
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Postman_Jenkins_Report
+No credentials specified
+Cloning the remote Git repository
+Cloning repository git://github.com/wardviaene/docker-demo.git
+ > git.exe init C:\Program Files (x86)\Jenkins\workspace\Postman_Jenkins_Report # timeout=10
+Fetching upstream changes from git://github.com/wardviaene/docker-demo.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress -- git://github.com/wardviaene/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url git://github.com/wardviaene/docker-demo.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url git://github.com/wardviaene/docker-demo.git # timeout=10
+Fetching upstream changes from git://github.com/wardviaene/docker-demo.git
+ > git.exe fetch --tags --progress -- git://github.com/wardviaene/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git.exe show-ref --tags -d # timeout=10
+Checking out Revision 2e178527b717c6d6c285b82da64dc487c4ac092f (origin/v1.0.1)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 2e178527b717c6d6c285b82da64dc487c4ac092f # timeout=10
+Commit message: "dependencies bump"
+ > git.exe rev-list --no-walk 2e178527b717c6d6c285b82da64dc487c4ac092f # timeout=10
+ > git.exe tag -a -f -m Jenkins Build #5 jenkins-Postman_Jenkins_Report-5 # timeout=10
+[Postman_Jenkins_Report] $ C:\Windows\System32\cmd.exe -xe C:\WINDOWS\TEMP\jenkins8605426814805005837.sh
+Microsoft Windows [Version 10.0.18362.1016]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Program Files (x86)\Jenkins\workspace\Postman_Jenkins_Report>Finished: SUCCESS

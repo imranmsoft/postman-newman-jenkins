@@ -1,0 +1,24 @@
+Started by timer
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Postman_Jenkins_Integration
+[Postman_Jenkins_Integration] $ cmd /c call C:\WINDOWS\TEMP\jenkins6411068207151958915.bat
+
+C:\Program Files (x86)\Jenkins\workspace\Postman_Jenkins_Integration>cd C:\Users\DSI\AppData\Roaming\npm\node_modules\newman\bin 
+
+C:\Users\DSI\AppData\Roaming\npm\node_modules\newman\bin>node newman C:\\Users\\DSI\\Desktop\\Postman json\\test.json 
+error: invalid command `C:\\Users\\DSI\\Desktop\\Postman,json\\test.json`
+
+Usage: newman [options] [command]
+
+Options:
+  -v, --version               output the version number
+  -h, --help                  display help for command
+
+Commands:
+  run [options] <collection>  URL or path to a Postman Collection.
+
+To get available options for a command:
+  newman <command> -h
+
+C:\Users\DSI\AppData\Roaming\npm\node_modules\newman\bin>exit 0 
+Finished: SUCCESS

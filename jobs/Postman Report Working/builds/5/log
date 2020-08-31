@@ -1,0 +1,12 @@
+Started by user [8mha:////4OISRqM84FXU9k/qMGOrQflZagjXUKIkCbj45Y0Lv22kAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYe/dLi1CL93MzcosQ8ADSUAu7BAAAA[0mImran Alam
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Postman Report
+[Postman Report] $ cmd /c call C:\WINDOWS\TEMP\jenkins5541555737320142092.bat
+
+C:\Program Files (x86)\Jenkins\workspace\Postman Report>newman -v 
+5.1.2
+Recording test results
+ERROR: Step ‘Publish JUnit test result report’ failed: Test reports were found but none of them are new. Did leafNodes run? 
+For example, C:\Program Files (x86)\Jenkins\workspace\Postman Report\Demo.postman_collection.json is 4 hr 45 min old
+
+Finished: FAILURE

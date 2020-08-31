@@ -1,0 +1,54 @@
+Started by timer
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Postman Report Working
+[Postman Report Working] $ cmd /c call C:\WINDOWS\TEMP\jenkins7609977476773753670.bat
+
+C:\Program Files (x86)\Jenkins\workspace\Postman Report Working>newman run "https://www.getpostman.com/collections/4123210aa4f0f408c259"  
+newman
+
+Demo
+
+→ Get-ParamAdding
+  GET https://httpbin.org/get?myparameter=1&myparameter2=2&parmater3=this cool [200 OK, 768B, 1122ms]
+
+→ Post-Payload
+  POST https://httpbin.org/post [200 OK, 948B, 273ms]
+  ┌
+  │ '{{uuid}}'
+  └
+  √  Sucessfully UUID is Generated :  ---->->   {{uuid}}
+
+→ Get-Uuid
+  GET https://httpbin.org/uuid [200 OK, 282B, 269ms]
+
+→ Post-OrderId-CustomerId-Dynamic
+  ┌
+  │ 18
+  └
+  POST https://httpbin.org/post?= [200 OK, 1.3KB, 267ms]
+  √  Response is 200
+  √  token: undefined is generated Successfully
+  √  Token ab535cd2-6621-4b3a-9ef0-26290b60ffb2 is generated successfully
+  √  Post request successfully got 200
+  √  Verify Product Id
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   4 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   3 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                   6 │                   0 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 2.1s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 2.36KB (approx)                                │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 482ms [min: 267ms, max: 1122ms, s.d.: 369ms] │
+└─────────────────────────────────────────────────────────────────────┘
+Finished: SUCCESS

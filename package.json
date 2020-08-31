@@ -1,0 +1,12 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "Project for storing Postman Pipeline script Tests",
+  "scripts": {
+    "api-tests-production": "newman run "https://www.getpostman.com/collections/4123210aa4f0f408c259"
+  },
+  "author": "Imran-PdTeam-dsi",
+  "dependencies": {
+    "newman": "^5.1.2"
+  }
+}

@@ -1,0 +1,14 @@
+Started by user [8mha:////4OISRqM84FXU9k/qMGOrQflZagjXUKIkCbj45Y0Lv22kAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYe/dLi1CL93MzcosQ8ADSUAu7BAAAA[0mImran Alam
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Postman Report
+[Postman Report] $ cmd /c call C:\WINDOWS\TEMP\jenkins724537008703010227.bat
+
+C:\Program Files (x86)\Jenkins\workspace\Postman Report>newman run "https://www.getpostman.com/collections/4123210aa4f0f408c259" --reporters=cli,junit --reporter-junit-export "newman/report.xml" 
+'newman' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Jenkins\workspace\Postman Report>exit 9009 
+Build step 'Execute Windows batch command' marked build as failure
+Recording test results
+ERROR: Step ‘Publish JUnit test result report’ failed: No test report files were found. Configuration error?
+Finished: FAILURE

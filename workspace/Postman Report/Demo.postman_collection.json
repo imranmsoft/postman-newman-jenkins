@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "0f0935b0-5f1b-45c1-a814-44fb53c92d9c",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-ParamAdding",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://httpbin.org/get?myparameter=1&myparameter2=2&parmater3=this cool",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "myparameter",
+							"value": "1"
+						},
+						{
+							"key": "myparameter2",
+							"value": "2"
+						},
+						{
+							"key": "parmater3",
+							"value": "this cool"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get-ParamAdding",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://httpbin.org/get?myparameter=1&myparameter2=2&parmater3=this cool",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "myparameter",
+									"value": "1"
+								},
+								{
+									"key": "myparameter2",
+									"value": "2"
+								},
+								{
+									"key": "parmater3",
+									"value": "this cool"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Post-Payload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4baaa904-272e-4c24-817e-e81d33d93487",
+						"exec": [
+							"\r",
+							"\r",
+							"jsonData= JSON.parse(responseBody);\r",
+							"let id=jsonData.json.id\r",
+							"console.log(id);\r",
+							"\r",
+							"\r",
+							"pm.test(\"Sucessfully UUID is Generated :  ---->->   \"       + jsonData.json.id,    function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.json.id).to.eql(id);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// pm.test(\"Verify UUID\", function () {\r",
+							"//     var jsonData = pm.response.json();\r",
+							"//     pm.expect(jsonData.json.id).to.eql(pm.globals.get(\"uuid\"));\r",
+							"// });\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Imran\",\r\n\"email\": \"imranalam@gmail.com\",\r\n\"id\": \"{{uuid}}\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://httpbin.org/post",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Uuid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ba032997-ac9c-49a8-8a04-7d4049a50e55",
+						"exec": [
+							"//let response=pm.response.json();\r",
+							"\r",
+							"//pm.globals.set(\"uuid\", response.uuid);\r",
+							"\r",
+							"let response=pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"uuid\", response.uuid);\r",
+							"\r",
+							"//pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://httpbin.org/uuid",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"uuid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post-OrderId-CustomerId-Dynamic",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8983f7d1-485b-4a22-9ebc-079d3650f70f",
+						"exec": [
+							"jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"token= Object.keys(jsonData[\"headers\"])[6];\r",
+							"tokendata = jsonData[\"headers\"][token];\r",
+							"\r",
+							"pm.test(\"Token \"+tokendata +\" is generated successfully\", function () {\r",
+							"//pm.response.to.have.status(200);\r",
+							"\r",
+							"\r",
+							"if (responseCode.code === 200) {\r",
+							"pm.test(\"Response is 200\");\r",
+							"} else if (responseCode.code === 400) {\r",
+							"pm.test(\"Response is 400\");\r",
+							"} else {\r",
+							"pm.test(\"Response is 500\");\r",
+							"}\r",
+							"\r",
+							"pm.test(\"token: \" + jsonData.token + \" is generated Successfully\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Post request successfully got 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"   \r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify Product Id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.json.products[0].productId).to.eql(3000);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c5ee1521-5ab0-4ab2-805f-997e6ebc88ad",
+						"exec": [
+							"const customerId=Math.floor((Math.random()*100)+1);\r",
+							"console.log(customerId);\r",
+							"\r",
+							" //set an environment Variable\r",
+							"\r",
+							"pm.globals.set(\"customerId\", customerId);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerd\": {{customerId}},\r\n    \"orderId\": \"{{uuid}}\",\r\n    \"products\": [\r\n      {\r\n        \"productId\": 3000,\r\n        \"quantity\": 235\r\n      },\r\n      {\r\n        \"productId\": 2000,\r\n        \"quantity\": 137\r\n      }\r\n    ]\r\n\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://httpbin.org/post?=",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://httpbin.org/post",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e776c33d-9f12-4473-906f-e99ecf3e0bff",
+						"exec": [
+							"pm.sendRequest(\"https://httpbin.org/uuid\", function (err, response) {\r",
+							"const data = pm.response.json();\r",
+							"pm.environment.set(\"uuid\", data.uuid);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"id\":\"{{uuid}}\",\r\n\"username\":\"jone doe\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://httpbin.org/post",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,18 @@
+Started at Mon Aug 31 14:52:56 BDT 2020
+Processing imran_pipleline
+Offering imran_pipleline to Project Build Discarder
+Processing node js plugin
+Offering node js plugin to Project Build Discarder
+Processing Pipeline_Imran_Script
+Offering Pipeline_Imran_Script to Project Build Discarder
+Processing Postman New SetUp
+Offering Postman New SetUp to Project Build Discarder
+Processing Postman Report Working
+Offering Postman Report Working to Project Build Discarder
+Processing Postman_Jenkins_Integration
+Offering Postman_Jenkins_Integration to Project Build Discarder
+Processing Postman_Jenkins_Report
+Offering Postman_Jenkins_Report to Project Build Discarder
+Processing seed project
+Offering seed project to Project Build Discarder
+Finished at Mon Aug 31 14:52:56 BDT 2020. 8ms

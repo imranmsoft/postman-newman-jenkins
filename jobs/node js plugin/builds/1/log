@@ -1,0 +1,28 @@
+Started by user [8mha:////4OISRqM84FXU9k/qMGOrQflZagjXUKIkCbj45Y0Lv22kAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYe/dLi1CL93MzcosQ8ADSUAu7BAAAA[0mImran Alam
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\node js plugin
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/wardviaene/docker-demo.git
+ > git.exe init C:\Program Files (x86)\Jenkins\workspace\node js plugin # timeout=10
+Fetching upstream changes from https://github.com/wardviaene/docker-demo.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress -- https://github.com/wardviaene/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/wardviaene/docker-demo.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/wardviaene/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/wardviaene/docker-demo.git
+ > git.exe fetch --tags --progress -- https://github.com/wardviaene/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 60e6c11240f1e29dbef8df67a01ef580ce01cadf (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+Commit message: "node version bump to 12"
+First time build. Skipping changelog.
+Unpacking https://nodejs.org/dist/v14.5.0/node-v14.5.0-win-x86.zip to C:\Program Files (x86)\Jenkins\tools\jenkins.plugins.nodejs.tools.NodeJSInstallation\Node-Build on Jenkins
+[node js plugin] $ C:\Windows\System32\cmd.exe -xe C:\WINDOWS\TEMP\jenkins4286127458362562880.sh
+Microsoft Windows [Version 10.0.18362.1016]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Program Files (x86)\Jenkins\workspace\node js plugin>Finished: SUCCESS
